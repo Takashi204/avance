@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Volver</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">rePass</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Cambiar Contraseña</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <!-- Input de Nombre -->
+            <ion-item>
+              <ion-input [(ngModel)]="user.password" label="Nueva Contraseña" type="password" labelPlacement="floating"
+                  placeholder="Contraseña">
+                </ion-input>
+            </ion-item>
+            <!-- Input de Contraseña -->
+            <ion-item>
+              <ion-input [(ngModel)]="user.password" label="Confirmar Contraseña" type="password" labelPlacement="floating"
+                placeholder="Contraseña">
+              </ion-input>
+            </ion-item>
+            <!-- Boton que redirigue a Home --> <br>
+            <ion-button size="small"  id="btnIngresar" #btnIngresar>Ingresar</ion-button>
+            
+            
+          
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    
+  </div>
+</ion-content>
+
