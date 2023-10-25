@@ -38,5 +38,25 @@ export class ApiService {
 
 
   //actualizar
+  updatePost(id: any, post: any): Observable<any> {
+    return this.http.put(this.apiURL + "/posts/" + id, post, this.httpOptions).pipe(
+      retry(3)
+    );
+  }
+
+
+  //List All
+  getPosts(): Observable<any> {
+    return this.http.get(this.apiURL + "/posts").pipe(
+      retry(3)
+    );
+  }
+
+  //Get one Object
+  getPost(ID: any): Observable<any> {
+    return this.http.get(this.apiURL + "/posts/" + ID).pipe(
+      retry(3)
+    )
+  }
 
 }
